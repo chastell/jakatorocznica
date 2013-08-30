@@ -36,8 +36,13 @@
   </head>
   <body>
     <div>
-      <h1><%= @anniversary_number %>.</h1>
-      <h2><%= @current_anniversary.name %></h2>
+      <% if(@current_anniversary) %>
+        <h1><%= @anniversary_number %>.</h1>
+        <h2><%= @current_anniversary.date %> <%= @current_anniversary.name %></h2>
+      <% else %>
+        <h2>Nie znaleźliśmy dziś żadnej rocznicy :(</h2>
+        <img src="http://tehgeek.com/storage/post-images/sad-panda.jpg" />
+      <% end %>
 
       <p>przegapiłaś <strong>666. rocznicę</strong> nadania praw miejskich Bydgoszczy</p>
       <p>pamiętaj o <strong>667. rocznicy</strong> nadania praw miejskich Bydgoszczy</p>
