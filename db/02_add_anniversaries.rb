@@ -23,10 +23,16 @@ class AddAnniversaries < ActiveRecord::Migration
                        :name => 'zwycięstwo Neustrii nad Austrazją pod Compiègne')
     Anniversary.create(:year => 1879, :month => 9, :day => 27,
                        :name => 'otwarcie Portu Drzewnego w Bydgoszczy')
-    Anniversary.create(:year => 1991, :month => 9, :day => 27,
-                       :name => 'otwarcie Portu Drzewnego w Bydgoszczy')
-    Anniversary.create(:year => 1933, :month => 10, :day => 20,
-                       :name => 'Nisko uzyskało prawa miejskie')
+    Anniversary.create(:year => 1501, :month => 10, :day => 23,
+                       :name => 'zatwierdzenie unii mielnickiej')
+    Anniversary.create(:year => 1767, :month => 10, :day => 24,
+                       :name => 'nadanie Andrychowowi praw miejskich')
+    Anniversary.create(:year => 1861, :month => 10, :day => 24,
+                       :name => 'otwarcie linii kolejowej Toruń-Bydgoszcz')
+    Anniversary.create(:year => 1880, :month => 10, :day => 25,
+                       :name => 'otwarcie Teatru Małego w Warszawie')
+    Anniversary.create(:year => 1660, :month => 11, :day => 2,
+                       :name => 'koniec bitwy pod Cudnowem')
   end
 
   def down
