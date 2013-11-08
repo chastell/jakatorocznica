@@ -36,16 +36,16 @@
   </head>
   <body>
     <div>
-      <% if(@current_anniversary) %>
-        <h1><%= @anniversary_number %>.</h1>
+      <% if @current_anniversary %>
+        <h1><%= Date.today.year - @current_anniversary.date.year %>.</h1>
         <h2><%= @current_anniversary.date %> <%= @current_anniversary.name %></h2>
       <% else %>
         <h2>Nie znaleźliśmy dziś żadnej rocznicy :(</h2>
         <img src="http://tehgeek.com/storage/post-images/sad-panda.jpg" />
       <% end %>
 
-      <p>przegapiłaś <strong><%= @last_anniversary_number %>. rocznicę</strong> <%= @last_anniversary.name %></p>
-      <p>pamiętaj o <strong>667. rocznicy</strong> nadania praw miejskich Bydgoszczy</p>
+      <p>przegapiłaś <strong><%= Date.today.year - @last_anniversary.date.year %>. rocznicę</strong> <%= @last_anniversary.name %></p>
+      <p>pamiętaj o <strong><%= Date.today.year - @next_anniversary.date.year %>. rocznicy</strong> <%= @next_anniversary.name %></p>
     </div>
   </body>
 </html>
